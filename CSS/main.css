@@ -15,6 +15,11 @@ html, body {
     align-items: center;
     display: flex;
     justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .position-ref {

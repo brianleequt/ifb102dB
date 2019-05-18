@@ -11,17 +11,15 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
 <body>
-<div class="flex-center">
-    Current CPU Temperature :
 <?php
-$cdata = new TempData();
-$cdata->getTemps();
-$tdata =$cdata->getTemps();
-echo $tdata;
+$data = new QueryData();
+$data->connect();
+
+$regions = $data->getAllRegions();
+
+foreach ($regions as $region) {
+    echo "<div class='content'>(Region Name: " .$region['r_name']. ")</div> ";
+};
 ?>
-</div>
-<div class="links content">
-    <a href="http://192.168.0.8/result.php">Run SQL Query</a>
-</div>
 </body>
 </html>
