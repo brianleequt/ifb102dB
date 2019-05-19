@@ -1,3 +1,6 @@
-<div class="links footer">
+<div class="footer">
+    <div class="links">
     <a href="https://github.com/brianleequt">GitHub</a>
+    </div>
+    <div class="flex-center"><?php echo date('l jS \of F Y h:i:s A') ?></div>
 </div>
