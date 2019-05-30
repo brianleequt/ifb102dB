@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <head>
+    <title>IFB102 dB</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 <style>
     <?php include 'CSS/main.css'; ?>
     <?php include 'CSS/tables.css'; ?>
 </style>
 </head>
-<html>
+<html lang="en">
 <?php include 'urlroute.php'; ?>
 <?php include 'header.php'; ?>
 <?php include 'footer.php'; ?>
 <?php require 'querydata.php'; ?>
-<title>IFB102 dB</title>
 <body>
 <div class="flex-center">
     Current CPU Temperature :
@@ -28,7 +28,6 @@ $data = new QueryData();
 $data->connect();
 $rows = $data->minCostSupp();
 $colheads = array("Account Balance","Supplier","Nation","Part Key","Manufacturer","Supplier Address","Supplier Phone","Supplier Comment");
-$mem = memory_get_usage();
 ?>
 <table id="queries">
     <tr>

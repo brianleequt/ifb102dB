@@ -93,7 +93,12 @@ html, body {
 .column {
     float: left;
     width: 50%;
+    background-color: #dddddd;
+    color: black;
+    column-fill: balance;
+    height: 500px;
 }
+
 
 .m-b-md {
     margin-bottom: 30px;

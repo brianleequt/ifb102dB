@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<style>
-    <?php include 'CSS/main.css'; ?>
-</style>
-<html>
+<head>
+    <title>IFB102 dB</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        <?php include 'CSS/main.css'; ?>
+        <?php include 'CSS/tables.css'; ?>
+    </style>
+</head>
+<html lang="en">
+<?php include 'urlroute.php'; ?>
 <?php include 'header.php'; ?>
 <?php include 'footer.php'; ?>
 <?php require 'querydata.php'; ?>
-<title>IFB102 dB</title>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
 <body>
 <div class="flex-center">
     Current CPU Temperature :
@@ -17,17 +19,28 @@
     $cdata = new TempData();
     $cdata->getTemps();
     $tdata =$cdata->getTemps();
-    echo $tdata;
-    echo "PHP Memory used: ".round((memory_get_usage() - $mem) / 1024 / 1024, 2)."M\n"; ?>
+    $mem = memory_get_usage();
+    echo $tdata; echo "&emsp; | &emsp;";
+    print_mem(); ?>
 </div>
 <?php
 $data = new QueryData();
 $data->connect();
-$regions = $data->getAllRegions();
-$mem = memory_get_usage();
-foreach ($regions as $region) {
-    echo "<div class='content'>(Region Name: " .$region['r_name']. ")</div> ";
-};
+$rows = $data->smllOdrRev();
 ?>
+<table id="queries">
+    <tr>
+            <th>
+                Average Yearly Revenue Lost (US Dollars)
+            </th>
+    </tr>
+
+    <tr>
+        <?php foreach ($rows as $row): ?>
+        <td><?= $row['avg_yearly'] ?></td>
+        <?php endforeach ?>
+    </tr>
+
+</table>
 </body>
 </html>

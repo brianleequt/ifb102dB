@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <head>
+    <title>IFB102 dB</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <style>
         <?php include 'CSS/main.css'; ?>
         <?php include 'CSS/tables.css'; ?>
     </style>
 </head>
-<html>
+<html lang="en">
 <?php include 'urlroute.php'; ?>
 <?php include 'header.php'; ?>
 <?php include 'footer.php'; ?>
 <?php require 'querydata.php'; ?>
-<title>IFB102 dB</title>
-
 <body>
 <div class="flex-center">
     Current CPU Temperature :
@@ -40,9 +39,25 @@ print_mem(); ?>
             address, phone number and comment information.
             </a>
         </td>
+    <tr>
+        <td>Small-Quantity-Order Revenue Query</td>
+        <td>
+            <a href="<?=$link?>result.php">
+                This query determines how much average yearly revenue would be lost if orders were no longer filled for
+                small quantities of certain parts. This may reduce overhead expenses by concentrating sales on larger shipments.
+            </a>
+        </td>
+    <tr>
+        <td>
+            Database
+        </td>
+        <td>
+            This database contains 	~7,026,286 records across 8 tables. The database is open data supplied by the Transaction Processing Performance Council (TPC).
+        </td>
+    </tr>
 </table>
-<div class="linksStrong">
-    <a href="<?=$link?>resources.php">Resources & Documentation</a>
-</div>
+    <div class="linksStrong">
+        <a href="<?=$link?>resources.php">Resources & Documentation</a>
+    </div>
 </body>
 </html>
