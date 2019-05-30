@@ -4,6 +4,7 @@
     <?php include 'CSS/tables.css'; ?>
 </style>
 <html>
+<?php include 'urlroute.php'; ?>
 <?php include 'header.php'; ?>
 <?php include 'footer.php'; ?>
 <?php require 'querydata.php'; ?>
@@ -18,8 +19,9 @@
     $cdata = new TempData();
     $cdata->getTemps();
     $tdata =$cdata->getTemps();
-    echo $tdata;
-    echo "PHP Memory used: ".round((memory_get_usage() - $mem) / 1024 / 1024, 2)."M\n";?>
+    $mem = memory_get_usage();
+    echo $tdata; echo "&emsp; | &emsp;";
+    echo "PHP Script Memory usage: ".round((memory_get_usage() - $mem) / 1024 / 1024, 2)."M\n"; ?>
 </div>
 <?php
 $data = new QueryData();
