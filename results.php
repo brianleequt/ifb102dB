@@ -1,17 +1,17 @@
 <!DOCTYPE html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 <style>
     <?php include 'CSS/main.css'; ?>
     <?php include 'CSS/tables.css'; ?>
 </style>
+</head>
 <html>
 <?php include 'urlroute.php'; ?>
 <?php include 'header.php'; ?>
 <?php include 'footer.php'; ?>
 <?php require 'querydata.php'; ?>
 <title>IFB102 dB</title>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
 <body>
 <div class="flex-center">
     Current CPU Temperature :
@@ -21,7 +21,7 @@
     $tdata =$cdata->getTemps();
     $mem = memory_get_usage();
     echo $tdata; echo "&emsp; | &emsp;";
-    echo "PHP Script Memory usage: ".round((memory_get_usage() - $mem) / 1024 / 1024, 2)."M\n"; ?>
+    print_mem(); ?>
 </div>
 <?php
 $data = new QueryData();

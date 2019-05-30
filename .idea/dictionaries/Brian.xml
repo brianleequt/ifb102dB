@@ -2,6 +2,7 @@
   <dictionary name="Brian">
     <words>
       <w>dbname</w>
+      <w>indexurl</w>
       <w>tpch</w>
     </words>
   </dictionary>

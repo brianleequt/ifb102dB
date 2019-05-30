@@ -58,7 +58,7 @@ class QueryData
                         AND n_regionkey = r_regionkey
                         AND r_name = 'EUROPE')
         ORDER BY s_acctbal DESC , n_name , s_name , p_partkey
-        LIMIT 110");
+        LIMIT 120");
 
         $query->execute();
         return $query;
@@ -75,4 +75,11 @@ class TempData
         return $output;
     }
 
+}
+
+function print_mem()
+{
+    $mem_usage = memory_get_usage();
+
+    echo 'PHP Script memory usage: ' . round($mem_usage / 1024) . 'KB.<br>';
 }

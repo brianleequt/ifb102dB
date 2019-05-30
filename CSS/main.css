@@ -1,7 +1,7 @@
 html, body {
     background-color: #f0f8ff;
     color: #636b6f;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 200;
     height: 100vh;
     margin: 0;
@@ -63,7 +63,7 @@ html, body {
     font-size: 68px;
 }
 
-.links > a {
+.links {
     color: #000000;
     padding: 0 25px;
     font-size: 15px;
@@ -71,6 +71,28 @@ html, body {
     letter-spacing: .1rem;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.linksStrong {
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.homeselect {
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.column {
+    float: left;
+    width: 50%;
 }
 
 .m-b-md {

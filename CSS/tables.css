@@ -1,5 +1,5 @@
 #queries {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
@@ -21,8 +21,8 @@
     color: white;
 }
 
-#queries1 {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+#indextab {
+    font-family: 'Open Sans', sans-serif;
     border-collapse: collapse;
     width: 50%;
     margin-left: 25%;
@@ -30,16 +30,16 @@
 
 }
 
-#queries1 td, #queries th {
+#indextab td, #queries th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#queries1 tr:nth-child(even){background-color: #f2f2f2;}
+#indextab tr:nth-child(even){background-color: #f2f2f2;}
 
-#queries1 tr:hover {background-color: #d6ebf8;}
+#indextab tr:hover {background-color: #d6ebf8;}
 
-#queries1 th {
+#indextab th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
