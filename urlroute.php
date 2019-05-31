@@ -1,6 +1,6 @@
 <?php
 // Program to display URL of current page.
-// Code snippet from https://www.geeksforgeeks.org/get-the-full-url-in-php/
+
 if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
     $link = "https";
 else

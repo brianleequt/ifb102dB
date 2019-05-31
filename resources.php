@@ -46,7 +46,7 @@ unset($link)
     <h2 align="center">URL Router snippet - PHP</h2>
     <p>
         // Program to display URL of current page.<br>
-        // Code snippet from https://www.geeksforgeeks.org/get-the-full-url-in-php/<br>
+
         if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')<br>
             $link = "https";<br>
         else<br>
@@ -69,7 +69,9 @@ unset($link)
         <h2 align="center">Static files</h2>
             <P align="center">
                 <a href="<?php echo $link ?>static/q1.sql">Raw SQL Query 1</a><br>
+                <a href="https://gist.githubusercontent.com/brianleequt/2e6f93cabfc090c8b541ef77328aa517/raw/0bcfb41cf377d53dd13c80c4e8d832f9e40934b6/sq1.sql">Query 1 Gist</a><br>
                 <a href="<?php echo $link ?>static/q2.sql">Raw SQL Query 2</a><br>
+                <a href="https://gist.githubusercontent.com/brianleequt/c4465938c9d733a8b070dfce88f3a4ed/raw/aa721df9c4e23a2d7cca01265059e6878dc08e5e/sq2.sql">Query 2 Gist</a><br>
                 <a href="<?php echo $link ?>static/tpc-h.pdf">Database TPC Benchmark™H PDF</a><br>
             </P>
     </div>
